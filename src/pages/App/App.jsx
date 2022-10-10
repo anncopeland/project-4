@@ -7,7 +7,8 @@ import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import TodoPage from '../TodoPage/TodoPage';
 import NotesPage from '../NotesPage/NotesPage';
-import NotesList from '../NotesListPage/NostesListPage';
+import NotesListPage from '../NotesListPage/NostesListPage';
+import AboutPage from '../AboutPage/AboutPage';
 import {getUser} from '../../utilities/users-service';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -16,10 +17,10 @@ import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import ListGroup from 'react-bootstrap/ListGroup';
-  
+
 function App() {
     // set the user by calling getUser function
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(getUser())
 
     function addUsername(newUsername) {
         console.log(`new username: ${newUsername}`)
@@ -27,15 +28,16 @@ function App() {
     }
 
     return (
-        < main className="App">
+        <main className="App">
             {user ?
                 <>
                     <NavBar user={user} setUser={setUser}/>
                     <Routes>
-                        <Route path="/homePage" element={<HomePage  />}/>
-                        <Route path="/todo" element={<TodoPage  />}/>
-                        <Route path="/notes" element={<NotesPage   />}/>
-                        <Route path="/notes/notesList/:id" element={<NotesList  />}/>
+                        <Route path="/homePage" element={<HomePage user={user}/>}/>
+                        <Route path="/todoPage" element={<TodoPage user={user}/>}/>
+                        <Route path="/notesPage" element={<NotesPage user={user} />}/>
+                        <Route path="/notes/notesListPage/:id" element={<NotesListPage user={user} />}/>
+                        <Route path="/aboutPage" element={<AboutPage />}/>
                     </Routes>
                 </>
                 :

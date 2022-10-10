@@ -2,7 +2,7 @@
 function TodoPage({user}) {
     return (
         <>
-            <h1>{user}'s todo page</h1>
+            <h1 >{user.name}'s todos...</h1>
         </>
     )
 }
