@@ -1,11 +1,11 @@
 
+import mongoose from "mongoose";
 
 const Schema = require('mongoose').Schema;
 
 const todoSchema = new Schema({
-    name: { type: String, required: true },
-    emoji: String,
-    category: { type: Schema.Types.ObjectId, ref: 'Category' },
+    title: { type: String, required: true },
+    content: String
   }, {
     timestamps: true
   });
