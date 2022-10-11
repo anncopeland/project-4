@@ -1,7 +1,7 @@
 # SEIR-Project-4
 
-## Clean Living
-Clean Living is a MERN Stack website created for residential cleaning services.  
+## MyTodos
+Mytodos App is a MERN Stack website created to keep all you todos in order and notes for all your needs.  
 
 -------------------------------------
 ## Check it out!
@@ -10,10 +10,10 @@ Clean Living is a MERN Stack website created for residential cleaning services.
 _____________________________________
 ## Description
 **Problem:**
-Most homeonwers do not have time these days with busy schedules to clean an entire house.  Nor, do they enjoy such chores!  With that in mind, people are looking to outside help or just extra hands to tidy up their homes.  
+ People have lot of things to do!  For the many things we have to get done, we need a little help organising our todos.  
 
 **Solution:**
-Clean Living offers acceptional residential cleaning services to free up time for more exciting activities.
+Mytodos app provides a simple solution for all your todos.  This app will track your todos in one place, where you can add, delete, edit, and save alll your todos.
 
 _____________________________________
 ## Language Used
@@ -77,6 +77,8 @@ _____________________________________
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
+![ReactBootstrap](https://i.imgur.com/Q0bfPC5.png)
+
 
 _____________________________________
 ## Future Add-ons
@@ -87,6 +89,7 @@ _____________________________________
 _____________________________________
 ## Contribution/Credits
 * 
+
 ____________________________________
 ## Links
 * [Heroku]()
@@ -95,5 +98,6 @@ ____________________________________
 
 _____________________________________
 ### By
-* [AnnCopeland](https://github.com/anncopeland/project-4)
+Ann Copeland
+* [GitHub](https://github.com/anncopeland/project-4)
 
