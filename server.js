@@ -30,6 +30,9 @@ app.use(require('./config/checkToken'));
 // http://localhost:3001/api/users
 app.use('/api/users', require('./routes/api/users'));
 
+// use routes
+app.use("/api/todos", require("./routes/api/todos"));
+
 // Put API routes here, before the "catch all" route
 
 // The following "catch all" route (note the *) is necessary

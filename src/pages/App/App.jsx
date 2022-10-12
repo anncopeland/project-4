@@ -5,10 +5,9 @@ import AuthPage from '../AuthPage/AuthPage';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
-import TodoPage from '../TodoPage/TodoPage';
-import TodoList from '../TodoList/TodoList';
+import TodoPage from '../../components/TodoFormPage/TodoFormPage';
+import TodoList from '../TodoListPage/TodoListPage';
 import NotesPage from '../NotesPage/NotesPage';
-import NotesListPage from '../NotesListPage/NostesListPage';
 import AboutPage from '../AboutPage/AboutPage';
 import {getUser} from '../../utilities/users-service';
 import Container from 'react-bootstrap/Container';
@@ -39,8 +38,6 @@ function App() {
         setUser([user, newUsername])
     }
 
-   
-
     return (
         <main className="App">
             {user ?
@@ -48,16 +45,14 @@ function App() {
                     <NavBar user={user} setUser={setUser}/>
                     <Routes>
                         <Route path="/homePage" element={<HomePage user={user}/>}/>
-                        <Route path="/todoPage" element={<TodoPage user={user} setUser={setUser} addTodo={addTodo} todoList={TodoList} />}/>
+                        <Route path="/todoPage" element={<TodoPage user={user} setUser={setUser} addTodo={addTodo}  />}/>
                         <Route path="/notesPage" element={<NotesPage user={user} />}/>
-                        <Route path="/notes/notesListPage/:id" element={<NotesListPage user={user} />}/>
                         <Route path="/aboutPage" element={<AboutPage />}/>
                     </Routes>
                    
                 </>
                 :
                 <AuthPage setUser={setUser}/>}
-
         </main>
        
     );
