@@ -1,6 +1,7 @@
-const Todo = require("../models/todoSchema");
+const Todo = require("../../models/todoSchema");
 
 async function addTodo(req, res) {
+    console.log("addTodo");
     // const {todo} = req.body;
     try {
         const todo = await Todo.create(req.body)
@@ -13,11 +14,14 @@ async function addTodo(req, res) {
     }
 }
 
-function index(req, res) {
-    res.render("todos/index",
-    {todos: Todo.getAll()}
-    
-)}
+async function index(req, res) {
+    const todos = await Todo.find({})
+    res.json(todos)
+    console.log(todos, "this is the index")
+}
+
+// show 
+
 
 module.exports = {
     addTodo,

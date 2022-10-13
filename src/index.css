@@ -158,10 +158,10 @@ button[type="submit"] {
 }
 
 .TodoForm {
-  display: flex;
   margin-left: auto;
   margin-top: 150px; 
   margin-right: auto;
   display: block;
+  font-size: 5px;
 }
 

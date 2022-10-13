@@ -1,5 +1,5 @@
-
-const Schema = require('mongoose').Schema;
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema;
 
 const todoSchema = new Schema({
     text: { 
@@ -10,4 +10,4 @@ const todoSchema = new Schema({
     timestamps: true
 });
   
-module.exports = todoSchema;
+module.exports = mongoose.model("Todo", todoSchema);

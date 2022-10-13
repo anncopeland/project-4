@@ -5,8 +5,8 @@ import AuthPage from '../AuthPage/AuthPage';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
-import TodoPage from '../../components/TodoFormPage/TodoFormPage';
-import TodoList from '../TodoListPage/TodoListPage';
+import TodoPage from '../../components/TodoPage/TodoPage';
+import TodoList from '../TodoList/TodoList';
 import NotesPage from '../NotesPage/NotesPage';
 import AboutPage from '../AboutPage/AboutPage';
 import {getUser} from '../../utilities/users-service';
@@ -21,16 +21,12 @@ import ListGroup from 'react-bootstrap/ListGroup';
 function App() {
     // set the user by calling getUser function
     const [user, setUser] = useState(getUser())
-    const [todos, setTodos] = useState([
-        {
-            test: "test todo",
-            isDone: false
-        }
-    ]);
+    const [todos, setTodos] = useState();
 
     const addTodo = text => {
-        const newTodos = [...todos, {text}];
+        const newTodos = [...todos, text];
         setTodos(newTodos);
+        console.log(newTodos)
     };
 
     function addUsername(newUsername) {
@@ -45,8 +41,9 @@ function App() {
                     <NavBar user={user} setUser={setUser}/>
                     <Routes>
                         <Route path="/homePage" element={<HomePage user={user}/>}/>
-                        <Route path="/todoPage" element={<TodoPage user={user} setUser={setUser} addTodo={addTodo}  />}/>
+                        <Route path="/todoPage" element={<TodoPage user={user} setUser={setUser} addTodo={addTodo} todoList={TodoList} />}/>
                         <Route path="/notesPage" element={<NotesPage user={user} />}/>
+                        
                         <Route path="/aboutPage" element={<AboutPage />}/>
                     </Routes>
                    
