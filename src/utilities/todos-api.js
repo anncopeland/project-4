@@ -10,3 +10,6 @@ export function index() {
     return sendRequest(BASE_URL);
 }
 
+export function deleteTodo(id) {
+    return sendRequest(`${BASE_URL}/${id}`, "delete")
+}

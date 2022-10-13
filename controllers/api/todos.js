@@ -1,8 +1,10 @@
+
+
 const Todo = require("../../models/todoSchema");
 
 async function addTodo(req, res) {
+    
     console.log("addTodo");
-    // const {todo} = req.body;
     try {
         const todo = await Todo.create(req.body)
         todo.save
@@ -20,10 +22,15 @@ async function index(req, res) {
     console.log(todos, "this is the index")
 }
 
-// show 
-
+// delete todo
+// async function deleteTodo(id) {
+//     // console.log("delelte", id)
+//     const deleteTodo = await Todo.findByIdAndDelete(req.params.id)
+//     res.json(deleteTodo) 
+// }
 
 module.exports = {
     addTodo,
     index,
+    // deleteTodo,
 }

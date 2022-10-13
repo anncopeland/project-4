@@ -106,6 +106,7 @@ label {
 }
 
 input {
+  width: 700px;
   padding: 1vmin;
   font-size: 2vmin;
   border: .1vmin solid var(--tan-3);
@@ -125,7 +126,7 @@ a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: var(--orange);
+  background-color: var(--tan-2);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
@@ -152,16 +153,9 @@ form:invalid button[type="submit"] {
   background-color: var(--tan-4);
 }
 
-button[type="submit"] {
-  grid-column: span 2;
-  margin: 1vmin 0 0;
-}
+/* button[type="submit"] {
+  grid-column: span 1;
+  margin: auto;
+} */
 
-.TodoForm {
-  margin-left: auto;
-  margin-top: 150px; 
-  margin-right: auto;
-  display: block;
-  font-size: 5px;
-}
 

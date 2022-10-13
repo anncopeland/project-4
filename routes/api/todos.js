@@ -8,4 +8,7 @@ router.get("/", todosCtrl.index);
 // GET /api/todos/:id
 router.post("/addTodo/", todosCtrl.addTodo);
 
+// delete /api/todos
+// router.delete("/deleteTodo/", todosCtrl.deleteTodo);
+
 module.exports = router;
