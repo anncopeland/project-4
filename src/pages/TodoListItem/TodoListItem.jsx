@@ -1,4 +1,4 @@
-function TodoListItem({item, index}) {
+function TodoListItem({item}) {
     return (
         <ul>
             <li className="todo-item">{item.name}</li>

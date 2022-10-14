@@ -1,0 +1,11 @@
+.TodoForm {
+    justify-content: center;
+    margin-left: auto;
+    margin-top: 150px; 
+    margin-right: auto;
+    font-size: 5px;
+  }
+
+.todo-btn {
+  border: none;
+}
