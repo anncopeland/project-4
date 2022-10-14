@@ -28,8 +28,16 @@ async function deleteTodo(id) {
     res.json(deleteTodo) 
 }
 
+async function updateTodo(req, res) {
+    const updatetodo = await Todo.findOne(req.body.id)
+    updatetodo.isCompleted = true
+    await updatetodo.save()
+    res.json(updatetodo)
+}
+
 module.exports = {
     addTodo,
     index,
     deleteTodo,
+    updateTodo,
 }
