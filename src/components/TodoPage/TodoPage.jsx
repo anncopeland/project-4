@@ -4,7 +4,7 @@ import TodoList from '../../pages/TodoList/TodoList';
 import "../TodoPage/TodoPage.css";
 
 
-function TodoPage({user}, {addTodo}) {
+function TodoPage({user}) {
     const [todo, setTodo] =useState([])
     const [newTodo, setNewTodo] =useState("")
     const [error, setError] = useState("");

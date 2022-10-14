@@ -6,9 +6,11 @@
     margin: 3px;
     padding: 2px;
     cursor: pointer;
-    width: 100%;
+    width: auto;
   }
 
 .todo-completed {
+  /* justify-content: space-between; */
   text-decoration: line-through;
 }
+

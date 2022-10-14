@@ -1,11 +1,10 @@
 import React from "react";
 import "../TodoList/TodoList.css";
-import TodoPage from "../../components/TodoPage/TodoPage";
+// import TodoPage from "../../components/TodoPage/TodoPage";
 import {useState} from "react";
-import {FaTimes} from "react-router-dom";
 import * as todosAPI from "../../utilities/todos-api";
 
-function TodoList({user, todo, idx}) {
+function TodoList({user, todo, handleComplete, handleDelete}) {
     const [todoList, setTodoList] = useState([]);
     const [completed, setCompleted] = useState(false);
     // console.log(todo); 
@@ -18,6 +17,8 @@ function TodoList({user, todo, idx}) {
     console.log(user._id);
 
     async function handleDelete(id) {
+        // const removeArr =[...todoList].filter(todo => todo.id !==id)
+        // setTodoList(removeArr);
         const deletingTodo = await todosAPI.deleteTodo(id);
         console.log(`delete: ${deletingTodo}`)
         // navigate('/todolist')
@@ -31,7 +32,7 @@ function TodoList({user, todo, idx}) {
                     ? "line-through" : "none"}}>
                     <h3>{todo.text}</h3>
                     <button onClick={handleComplete}>Complete</button>
-                    <button onClick={()=>handleDelete(todo._id)}>Delete</button>
+                    <button className="del-btn" key={todo.id} onClick={()=>handleDelete(todo.id)}>Delete</button>
             </div> 
         </form>
     );
