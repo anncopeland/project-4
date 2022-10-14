@@ -6,6 +6,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import TodoPage from '../../components/TodoPage/TodoPage';
+import TodoListItem from "../TodoListItem/TodoListItem";
 import TodoList from '../TodoList/TodoList';
 import NotesPage from '../NotesPage/NotesPage';
 import AboutPage from '../AboutPage/AboutPage';

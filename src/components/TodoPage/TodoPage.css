@@ -1,5 +1,5 @@
 .TodoForm {
-    display: flex;
+    justify-content: center;
     margin-left: auto;
     margin-top: 150px; 
     margin-right: auto;
@@ -8,6 +8,4 @@
 
 .todo-btn {
   border: none;
-  display: inline-flex;
-  
 }
