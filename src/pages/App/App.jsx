@@ -6,18 +6,17 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import TodoPage from '../../components/TodoPage/TodoPage';
-
 import TodoList from '../TodoList/TodoList';
 import NotesPage from '../NotesPage/NotesPage';
 import AboutPage from '../AboutPage/AboutPage';
 import {getUser} from '../../utilities/users-service';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
-import ListGroup from 'react-bootstrap/ListGroup';
+// import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import Button from 'react-bootstrap/Button';
+// import InputGroup from 'react-bootstrap/InputGroup';
+// import FormControl from 'react-bootstrap/FormControl';
+// import ListGroup from 'react-bootstrap/ListGroup';
 
 function App() {
     // set the user by calling getUser function
