@@ -18,11 +18,11 @@ async function addTodo(req, res) {
 async function index(req, res) {
     const todos = await Todo.find({})
     res.json(todos)
-    console.log(todos, "this is the index")
+    // console.log(todos, "this is the index")
 }
 
 //delete todo
-async function deleteTodo(id) {
+async function deleteTodo(req, res) {
     // console.log("delelte", id)
     const deleteTodo = await Todo.findByIdAndDelete(req.params.id)
     res.json(deleteTodo) 
@@ -31,6 +31,7 @@ async function deleteTodo(id) {
 async function updateTodo(req, res) {
     const updatetodo = await Todo.findOne(req.body.id)
     updatetodo.isCompleted = true
+    console.log(updatetodo)
     await updatetodo.save()
     res.json(updatetodo)
 }

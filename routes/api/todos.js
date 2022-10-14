@@ -10,7 +10,7 @@ router.post("/addTodo/", todosCtrl.addTodo);
 
 router.put("/updateTodo/", todosCtrl.updateTodo);
 
-// delete /api/todos
-// router.delete("/deleteTodo/", todosCtrl.deleteTodo);
+//delete /api/todos
+router.delete("/deleteTodo/", todosCtrl.deleteTodo);
 
 module.exports = router;
