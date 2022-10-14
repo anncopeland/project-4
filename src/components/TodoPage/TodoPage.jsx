@@ -28,13 +28,13 @@ function TodoPage({user}, {addTodo}) {
         }
             getTodos();
     }, []);
-    console.log(todo);
-    
-    const todoList = todo.map((t, id) =>
+   
+    const todoList = todo.map((t, idx) =>
         <TodoList 
-            key={id}
+            key={idx}
             todo={t}
-            id={id}
+            idx={idx}
+            user={user}
         />
     )
 
