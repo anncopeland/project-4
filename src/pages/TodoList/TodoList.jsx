@@ -41,7 +41,7 @@ function TodoList({user, todo, handleComplete, handleDelete}) {
                      
                     <h3>{todo.text}</h3>
                     <button onClick={handleComplete}>Complete</button>
-                    <button className="del-btn" key={todo.id} onClick={()=>handleDelete(todo.id)}>Delete</button>
+                    <button className="del-btn" key={todo.id} onClick={()=>handleDelete(todo._id)}>Delete</button>
                 </div> 
             </form>
              {/* :

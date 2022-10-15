@@ -16,5 +16,5 @@ export function updateTodo(id) {
 }
 
 export function deleteTodo(id) {
-    return sendRequest(`${BASE_URL}/${id}`, "delete")
+    return sendRequest(`${BASE_URL}/${id}`, "DELETE")
 }

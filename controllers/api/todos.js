@@ -1,4 +1,3 @@
-
 const Todo = require("../../models/todoSchema");
 
 async function addTodo(req, res) {
@@ -12,7 +11,7 @@ async function addTodo(req, res) {
         console.log(todoList)
         console.log(`EVERYTHING! ${req.body}`)
         todoList.save()
-        res.json(todoList)
+        res.json(todoList)  // to the database
         console.log(`this is the todo list: ${todoList}`)
     } 
     catch(error) {

@@ -11,6 +11,7 @@ router.post("/addTodo/", todosCtrl.addTodo);
 router.put("/updateTodo/", todosCtrl.updateTodo);
 
 //delete /api/todos
-router.delete("/deleteTodo/", todosCtrl.deleteTodo);
+// router.delete("/deleteTodo/", todosCtrl.deleteTodo);
+router.delete("/:id", todosCtrl.deleteTodo);
 
 module.exports = router;
