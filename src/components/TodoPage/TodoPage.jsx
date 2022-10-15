@@ -4,9 +4,13 @@ import TodoList from '../../pages/TodoList/TodoList';
 import "../TodoPage/TodoPage.css";
 
 
-function TodoPage({user}, {addTodo}) {
+function TodoPage({user}) {
     const [todo, setTodo] =useState([])
-    const [newTodo, setNewTodo] =useState("")
+    // const [newTodo, setNewTodo] =useState("")
+    const [newTodo, setNewTodo] =useState({
+        text: ""
+    })
+
     const [error, setError] = useState("");
 
     const handleChange = (e) => {
@@ -15,10 +19,19 @@ function TodoPage({user}, {addTodo}) {
         console.log(newTodo)
     }
 
+    // async function handleAddTodo(e) {
+    //     e.preventDefault();
+    //      const todoz = await todosAPI.addTodo({text: ""});
+    //     
+    // }
+
     async function handleAddTodo(e) {
         e.preventDefault();
-         const todoz = await todosAPI.addTodo({text: ""});
+         const todoz = await todosAPI.addTodo(newTodo);
+         setNewTodo(todoz)
+         window.location.reload();
     }
+    console.log(newTodo)
 
     useEffect(function() {
         async function getTodos() {
@@ -28,20 +41,21 @@ function TodoPage({user}, {addTodo}) {
         }
             getTodos();
     }, []);
-    console.log(todo);
-    
-    const todoList = todo.map((t, id) =>
+   
+    const todoList = todo.map((t, idx) =>
         <TodoList 
-            key={id}
+            key={idx}
             todo={t}
-            id={id}
+            idx={idx}
+            user={user}
         />
     )
 
     return (
         <>
             <h1>{user.name}'s todos...</h1>
-            <form className="TodoForm" onSubmit={() =>{todosAPI.addTodo(newTodo)}}>
+            {/* <form className="TodoForm" onSubmit={() =>{todosAPI.addTodo(newTodo)}}> */}
+            <form className="TodoForm" onSubmit={handleAddTodo}>
                 <input className="todo-input" type="text" name="text" placeholder="todos..." 
                     onChange={handleChange} value={newTodo.text} autoComplete="off"/>
                 <button className="todo-btn" type="submit">add</button>
