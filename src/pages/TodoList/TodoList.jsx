@@ -25,7 +25,6 @@ function TodoList({user, todo, handleComplete, handleDelete}) {
         // setTodoList(removeArr);
         const deletingTodo = await todosAPI.deleteTodo(id);
         console.log(`delete: ${deletingTodo}`)
-        // navigate('/todolist')
         window.location.reload();
     };
 
@@ -34,14 +33,14 @@ function TodoList({user, todo, handleComplete, handleDelete}) {
         {/* {user && user._id === todo.user ?  */}
             {/* {todo.user === user._id ?  */}
             <form className="todo-list">
-        {/* {if (user && (user._id === estimate.user)) */}
+        {/* if (user && (user._id === estimate.user))  */}
                 <div className="todo-complete"
                     style={{textDecoration: todo.isCompleted
-                    ? "line-through" : "none"}}> 
+                   ? "line-through" : "none"}}> 
                      
                     <h3>{todo.text}</h3>
                     <button onClick={handleComplete}>Complete</button>
-                    <button className="del-btn" key={todo.id} onClick={()=>handleDelete(todo.id)}>Delete</button>
+                    <button className="del-btn" key={todo.id} onClick={()=>handleDelete(todo._id)}>Delete</button>
                 </div> 
             </form>
              {/* :

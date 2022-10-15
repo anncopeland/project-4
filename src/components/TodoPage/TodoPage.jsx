@@ -11,14 +11,17 @@ function TodoPage({user}) {
 
     const handleChange = (e) => {
         setNewTodo({...newTodo, [e.target.name]:e.target.value})
+        
         setError('');
         console.log(newTodo)
     }
+    console.log(newTodo)
 
-    async function handleAddTodo(e) {
-        e.preventDefault();
-         const todoz = await todosAPI.addTodo({text: ""});
-    }
+    // async function handleAddTodo(e) {
+    //     e.preventDefault();
+    //      const todoz = await todosAPI.addTodo({text: ""});
+    //      console.log(todoz);
+    // }
 
     useEffect(function() {
         async function getTodos() {

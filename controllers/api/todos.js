@@ -5,10 +5,10 @@ async function addTodo(req, res) {
     
     console.log("addTodo");
     try {
-        const todo = await Todo.create(req.body)
-        todo.save
-        res.json(todo);
-        console.log(`this is todos${todo}`);
+        const newTodo = await Todo.create(req.body)
+        newTodo.save
+        res.json(newTodo)
+        console.log(`this is todos${newTodo}`)
     } 
     catch(error) {
         res.status(400).json(error)
@@ -28,6 +28,7 @@ async function deleteTodo(req, res) {
     res.json(deleteTodo) 
 }
 
+// Update todo
 async function updateTodo(req, res) {
     const updatetodo = await Todo.findOne(req.body.id)
     updatetodo.isCompleted = true
