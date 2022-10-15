@@ -3,12 +3,17 @@ const Todo = require("../../models/todoSchema");
 
 async function addTodo(req, res) {
     
-    console.log("addTodo");
     try {
-        const todo = await Todo.create(req.body)
-        todo.save
-        res.json(todo);
-        console.log(`this is todos${todo}`);
+        // const todo = await Todo.create(req.body)
+        // todo.save
+        // res.json(todo);
+        // console.log(`this is todos${todo}`);
+        const todoList = await new Todo(req.body);
+        console.log(todoList)
+        console.log(`EVERYTHING! ${req.body}`)
+        todoList.save()
+        res.json(todoList)
+        console.log(`this is the todo list: ${todoList}`)
     } 
     catch(error) {
         res.status(400).json(error)

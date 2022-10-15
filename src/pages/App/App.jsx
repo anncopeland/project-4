@@ -42,7 +42,7 @@ function App() {
                     <NavBar user={user} setUser={setUser}/>
                     <Routes>
                         <Route path="/homePage" element={<HomePage user={user}/>}/>
-                        <Route path="/todoPage" element={<TodoPage user={user} setUser={setUser} addTodo={addTodo} todoList={TodoList} />}/>
+                        <Route path="/todoPage" element={<TodoPage user={user} setUser={setUser} addTodo={addTodo} todoList={TodoList}  />}/>
                         <Route path="/notesPage" element={<NotesPage user={user} />}/>
                         <Route path="/aboutPage" element={<AboutPage />}/>
                     </Routes>
