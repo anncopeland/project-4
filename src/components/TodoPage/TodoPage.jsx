@@ -6,22 +6,32 @@ import "../TodoPage/TodoPage.css";
 
 function TodoPage({user}) {
     const [todo, setTodo] =useState([])
-    const [newTodo, setNewTodo] =useState("")
+    // const [newTodo, setNewTodo] =useState("")
+    const [newTodo, setNewTodo] =useState({
+        text: ""
+    })
+
     const [error, setError] = useState("");
 
     const handleChange = (e) => {
         setNewTodo({...newTodo, [e.target.name]:e.target.value})
-        
         setError('');
         console.log(newTodo)
     }
-    console.log(newTodo)
 
     // async function handleAddTodo(e) {
     //     e.preventDefault();
     //      const todoz = await todosAPI.addTodo({text: ""});
-    //      console.log(todoz);
+    //     
     // }
+
+    async function handleAddTodo(e) {
+        e.preventDefault();
+         const todoz = await todosAPI.addTodo(newTodo);
+         setNewTodo(todoz)
+         window.location.reload();
+    }
+    console.log(newTodo)
 
     useEffect(function() {
         async function getTodos() {
@@ -44,7 +54,8 @@ function TodoPage({user}) {
     return (
         <>
             <h1>{user.name}'s todos...</h1>
-            <form className="TodoForm" onSubmit={() =>{todosAPI.addTodo(newTodo)}}>
+            {/* <form className="TodoForm" onSubmit={() =>{todosAPI.addTodo(newTodo)}}> */}
+            <form className="TodoForm" onSubmit={handleAddTodo}>
                 <input className="todo-input" type="text" name="text" placeholder="todos..." 
                     onChange={handleChange} value={newTodo.text} autoComplete="off"/>
                 <button className="todo-btn" type="submit">add</button>
