@@ -1,21 +1,8 @@
 import {Component} from 'react';
 import {signUp} from '../../utilities/users-service';
 
-
 export default class SignUpForm extends Component {
-    // // state is always an object with a property for each "piece" of state
-    // constructor() {
-    //   super();
-    //   this.state = {
-    //     name: '',
-    //     email: '',
-    //     password: '',
-    //     confirm: '',
-    //     error: ''
-    //   };
-    //   this.handleChange = this.handleChange.bind(this)
-    // }
-
+   
     state = {
         name: '',
         email: '',
@@ -71,5 +58,4 @@ export default class SignUpForm extends Component {
             </div>
         );
     }
-
 };

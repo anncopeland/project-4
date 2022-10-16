@@ -1,6 +1,5 @@
 import "../AboutPage/AboutPage.css";
 
-
 function AboutPage() {
     return (
         <>

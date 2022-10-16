@@ -1,16 +1,29 @@
-.todo-list {
-    text-align: left;
+.todo-list-form {
+    display: flex;
+    color: rgb(200, 196, 196);
+    text-align: center;
     align-items: center;
-    justify-content: center;
-    background: rgb(236, 233, 233);
-    margin: 3px;
-    padding: 2px;
-    cursor: crosshair;
-    width: auto;
+    justify-content: right;
+    background: rgb(239, 238, 238);
+    margin: 5px;
+    border: 2em;
+    padding: 10px;
+    max-width: 100%;
+    border-radius: 1em;
   }
 
-.todo-completed {
-  /* justify-content: space-between; */
-  text-decoration: line-through;
+.chk-label {
+  display: flexbox;
+  text-align: right;
+  margin: auto;
+  padding: 2em;
+  font-size: small;
+  color: rgb(193, 142, 142);
+
 }
 
+.del-btn {
+  border-radius: .5em;
+  font-size: small;
+  color: rgb(182, 117, 117);
+}

@@ -1,5 +1,4 @@
 
-
 function HomePage({ user }) {
     return(
         <>

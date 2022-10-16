@@ -6,10 +6,10 @@ import "../TodoPage/TodoPage.css";
 
 function TodoPage({user}) {
     const [todo, setTodo] =useState([])
-    // const [newTodo, setNewTodo] =useState("")
     const [newTodo, setNewTodo] =useState({
         text: ""
     })
+    const [state, setState] = useState({isCompleted:false})
 
     const [error, setError] = useState("");
 
@@ -18,12 +18,6 @@ function TodoPage({user}) {
         setError('');
         console.log(newTodo)
     }
-
-    // async function handleAddTodo(e) {
-    //     e.preventDefault();
-    //      const todoz = await todosAPI.addTodo({text: ""});
-    //     
-    // }
 
     async function handleAddTodo(e) {
         e.preventDefault();
@@ -48,14 +42,15 @@ function TodoPage({user}) {
             todo={t}
             idx={idx}
             user={user}
+            state={state}
+            setState={setState}
         />
     )
 
     return (
         <>
             <h1>{user.name}'s todos...</h1>
-            {/* <form className="TodoForm" onSubmit={() =>{todosAPI.addTodo(newTodo)}}> */}
-            <form className="TodoForm" onSubmit={handleAddTodo}>
+            <form className="todo-form" onSubmit={handleAddTodo}>
                 <input className="todo-input" type="text" name="text" placeholder="todos..." 
                     onChange={handleChange} value={newTodo.text} autoComplete="off"/>
                 <button className="todo-btn" type="submit">add</button>

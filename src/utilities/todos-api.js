@@ -18,3 +18,10 @@ export function updateTodo(id) {
 export function deleteTodo(id) {
     return sendRequest(`${BASE_URL}/${id}`, "DELETE")
 }
+
+export function isCompletedTodo(id, newStatus) {
+        console.log(`user id:${id}`)
+        console.log(newStatus)
+        console.log(`state: ${newStatus}`)
+        return sendRequest(`${BASE_URL}/${id}`, 'PUT', newStatus)
+}

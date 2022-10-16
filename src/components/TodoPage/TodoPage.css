@@ -1,11 +1,18 @@
-.TodoForm {
+.todo-form {
+    display: flex;
     justify-content: center;
-    margin-left: auto;
-    margin-top: 150px; 
-    margin-right: auto;
+    border-radius: 3em;
+    margin-left: 175px;
+    margin-top: 100px; 
+    margin-right: 175px;
     font-size: 5px;
-  }
+    max-width: auto;
+    padding: 10px;
+    margin: 100px 100px 10px 100px;
+}
 
 .todo-btn {
-  border: none;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 1em;
 }

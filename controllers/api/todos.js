@@ -40,9 +40,20 @@ async function updateTodo(req, res) {
     res.json(updatetodo)
 }
 
+async function isCompletedTodo(req, res) {
+    const checkedTodo = await Todo.findById(req.params.id);
+    checkedTodo.isCompleted = req.isCompleted
+    await checkedTodo.save()
+    console.log( `checkedtodo.isCompleted: ${checkedTodo.isCompleted}`)
+    console.log( `checkedtodo: ${req.isCompleted}`)
+    console.log(`req.id: ${req.params.id}`)
+    res.json(checkedTodo)
+}
+
 module.exports = {
     addTodo,
     index,
     deleteTodo,
     updateTodo,
+    isCompletedTodo,
 }

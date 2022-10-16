@@ -1,14 +1,18 @@
 # SEIR-Project-4
 
-## MyTodos
+
+## MyTodos App
+
 Mytodos App is a MERN Stack website created to keep all you todos in order and notes for all your needs.  
 
 -------------------------------------
 ## Check it out!
+
 * [Heroku](https://project-4-cleanliving.herokuapp.com/)
 
 _____________________________________
 ## Description
+
 **Problem:**
  People have lot of things to do!  For the many things we have to get done, we need a little help organising our todos.  
 
@@ -17,6 +21,7 @@ Mytodos app provides a simple solution for all your todos.  This app will track 
 
 _____________________________________
 ## Language Used
+
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -41,26 +46,21 @@ _____________________________________
 ![WFaboutPage](https://i.imgur.com/tMTqodB.png)
 
 
-
 _____________________________________
 ## Wins
-* Working with React-Bootstrap was a great experience throughout this project.  It made forms easier and made the app look the way I want to show.
 
-
+* Working with React-Bootstrap was a great experience throughout this project.  It made forms easier and made the NavBar look clean and minimal.
 
 
 _____________________________________
 ## Challenges
 
-
-
-
-____________________________________
-
+* 
 
 
 _____________________________________
 ## Technologies
+
 ![Adobe Fonts](https://img.shields.io/badge/Adobe%20Fonts-000B1D.svg?style=for-the-badge&logo=Adobe%20Fonts&logoColor=white)
 
 ![Google](https://img.shields.io/badge/google-4285F4?style=for-the-badge&logo=google&logoColor=white)
@@ -82,22 +82,28 @@ _____________________________________
 
 _____________________________________
 ## Future Add-ons
+
+* Notes Component
+* Date/TIme for todos
 * User Profile
 * Google Calendar API
 
 
 _____________________________________
-## Contribution/Credits
-* 
+## Contribution
+
+* I am so grateful for all the help I received from my instructors and team mates.  Thank you all!
 
 ____________________________________
 ## Links
+
 * [Heroku]()
 * [ERD Diagram]()
 * [Wireframe]()
 
 _____________________________________
 ### By
+
 Ann Copeland
 * [GitHub](https://github.com/anncopeland/project-4)
 

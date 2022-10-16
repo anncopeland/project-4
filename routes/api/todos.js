@@ -14,4 +14,7 @@ router.put("/updateTodo/", todosCtrl.updateTodo);
 // router.delete("/deleteTodo/", todosCtrl.deleteTodo);
 router.delete("/:id", todosCtrl.deleteTodo);
 
+//PUT
+router.put('/:id', todosCtrl.isCompletedTodo)
+
 module.exports = router;
