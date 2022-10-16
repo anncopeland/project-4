@@ -81,7 +81,7 @@ code {
 }
 
 .form-container {
-  padding: 3vmin;
+  padding: 5vmin;
   background-color: var(--tan-1);
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
@@ -153,9 +153,9 @@ form:invalid button[type="submit"] {
   background-color: var(--tan-4);
 }
 
-/* button[type="submit"] {
+.button[type="submit"] {
   grid-column: span 1;
   margin: auto;
-}  */
+}  
 
 
