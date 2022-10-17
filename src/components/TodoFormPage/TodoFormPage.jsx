@@ -1,15 +1,17 @@
-import { Component, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import * as todosAPI from '../../utilities/todos-api';
 import TodoList from '../../pages/TodoList/TodoList';
-import "../TodoPage/TodoPage.css";
+import "./TodoFormPage.css";
 
 
-function TodoPage({user}) {
+function TodoFormPage({user}) {
     const [todo, setTodo] =useState([])
     const [newTodo, setNewTodo] =useState({
         text: ""
     })
-    const [state, setState] = useState({isCompleted:false})
+    const [state, setState] = useState({isCompleted:false});
+
+    const [todoReload, setTodoReload] = useState([]);
 
     const [error, setError] = useState("");
 
@@ -34,7 +36,7 @@ function TodoPage({user}) {
             setTodo(todos);
         }
             getTodos();
-    }, []);
+    }, [todoReload]);
    
     const todoList = todo.map((t, idx) =>
         <TodoList 
@@ -44,16 +46,31 @@ function TodoPage({user}) {
             user={user}
             state={state}
             setState={setState}
+            setTodoReload={setTodoReload}
         />
     )
 
     return (
         <>
             <h1>{user.name}'s todos...</h1>
-            <form className="todo-form" onSubmit={handleAddTodo}>
-                <input className="todo-input" type="text" name="text" placeholder="todos..." 
-                    onChange={handleChange} value={newTodo.text} autoComplete="off"/>
-                <button className="todo-btn" type="submit">add</button>
+            <form 
+                className="todo-form" 
+                onSubmit={handleAddTodo}
+            >
+                <input 
+                    className="todo-input" 
+                    type="text" 
+                    name="text" 
+                    placeholder="todos..." 
+                    onChange={handleChange} 
+                    value={newTodo.text} 
+                    autoComplete="off"/>
+                <button 
+                    className="todo-btn" 
+                    type="submit"
+                >
+                add
+                </button>
                 {error && <label className="error">{error}</label>}
             </form>
             {todoList}
@@ -61,4 +78,4 @@ function TodoPage({user}) {
     )
 }
 
-export default TodoPage;
+export default TodoFormPage;
