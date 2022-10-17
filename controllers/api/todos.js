@@ -1,7 +1,7 @@
 const Todo = require("../../models/todoSchema");
 
 async function index(req, res) {
-    const todos = await Todo.find({})
+    const todos = await Todo.find({user: req.user._id})
     res.json(todos)
     // console.log(todos, "this is the index")
 }
@@ -10,6 +10,7 @@ async function index(req, res) {
 async function addTodo(req, res) {
     
     try {
+        req.body.user = req.user._id
         const todoList = await new Todo(req.body);
         console.log(todoList)
         console.log(`EVERYTHING! ${req.body}`)
@@ -21,17 +22,6 @@ async function addTodo(req, res) {
         res.status(400).json(error)
     }
 }
-
-
-// async function isCompletedTodo(req, res) {
-//     const checkedTodo = await Todo.findById(req.params.id);
-//     checkedTodo.isCompleted = req.isCompleted
-//     await checkedTodo.save()
-//     console.log( `checkedtodo.isCompleted: ${checkedTodo.isCompleted}`)
-//     console.log( `checkedtodo: ${req.isCompleted}`)
-//     console.log(`req.id: ${req.params.id}`)
-//     res.json(checkedTodo)
-// }
 
 // update todo
 async function isCompletedTodo(req, res) {

@@ -7,6 +7,7 @@ import "./TodoFormPage.css";
 function TodoFormPage({user}) {
     const [todo, setTodo] =useState([])
     const [newTodo, setNewTodo] =useState({
+        user: user,
         text: ""
     })
     const [state, setState] = useState({isCompleted:false});
