@@ -55,7 +55,7 @@ _____________________________________
 _____________________________________
 ## Challenges
 
-* 
+* I wanted to create a simple app that allowed everyone to be able to track their todos.  I took a real simple approach and went back to basics with MERN stack.  My growth as a student to a softeare engineer is presented in this app.  Simple and clean codes that I am proud of.  Thank you to all my team mates for helping me get to this point.  
 
 
 _____________________________________
@@ -85,7 +85,6 @@ _____________________________________
 
 * Notes Component
 * Date/TIme for todos
-* User Profile
 * Google Calendar API
 
 
