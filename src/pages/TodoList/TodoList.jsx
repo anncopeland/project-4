@@ -2,7 +2,7 @@ import React from "react";
 import "../TodoList/TodoList.css";
 import {useState} from "react";
 import * as todosAPI from "../../utilities/todos-api";
-// import {useParams} from "react-router-dom";
+
 
 
 function TodoList({user, todo, handleComplete, handleDelete, state, setState, setTodoReload}) {
@@ -26,29 +26,28 @@ function TodoList({user, todo, handleComplete, handleDelete, state, setState, se
         console.log(todo._id)
         const completedTodo = await todosAPI.isCompletedTodo(todo);
         setTodoReload([1]);
-    }
+    };
     
     return (
-        // {todoList.map(todo => {}
-        //     if(user && (user._id == todo.user)){} 
-        <>
-            <form className="todo-list-form">
-                <span className="todo-complete"
-                      style={{
-                        textDecoration: todo.isCompleted === true
-                        ? 
-                        "line-through" 
-                        : 
-                        "none"}} 
-                > 
-                <h3>{todo.text}</h3> 
-                
-                <label 
+            <>
+                <form className="todo-list-form">
+                    <span 
+                        className="todo-complete"
+                        style={{
+                            textDecoration: todo.isCompleted === true
+                            ? 
+                            "line-through" 
+                            : 
+                            "none"}} 
+                    >
+                    <h3>{todo.text}</h3> 
+                  
+                    <label 
                     className="chk-label"
-                >
-                Complete
-                </label>
-                </span>
+                    >
+                    Complete
+                    </label>
+                    </span>
                 <input 
                     type="checkbox" 
                     onChange={(e) => 
@@ -63,9 +62,9 @@ function TodoList({user, todo, handleComplete, handleDelete, state, setState, se
                 >
                 Delete
                 </button>
-            </form>
-       </>
-    )
+                </form>
+            </>   
+        )
 }
-                    
+
 export default TodoList;
