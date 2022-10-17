@@ -1,5 +1,4 @@
 
-
 function NotesPage ({user}) {
     return (
         <>
