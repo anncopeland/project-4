@@ -30,30 +30,26 @@ function TodoList({user, todo, handleComplete, handleDelete, state, setState, se
     
     return (
         // {todoList.map(todo => {}
-        // if(user && (user._id == todo.user)) {}
+        //     if(user && (user._id == todo.user)){} 
         <>
             <form className="todo-list-form">
-                <div className="todo-complete"
-                    // style={{
-                    //     color: todo.isCompleted === true
-                    //     ? 
-                    //     "red" 
-                    //     : 
-                    //     "none"}} 
-                /> 
-                <h3>{todo.text}</h3> 
-                <label 
-                    className="chk-label"
-                >
-                Complete
-                </label>
-                <input 
-                     style={{
+                <span className="todo-complete"
+                      style={{
                         textDecoration: todo.isCompleted === true
                         ? 
                         "line-through" 
                         : 
                         "none"}} 
+                > 
+                <h3>{todo.text}</h3> 
+                
+                <label 
+                    className="chk-label"
+                >
+                Complete
+                </label>
+                </span>
+                <input 
                     type="checkbox" 
                     onChange={(e) => 
                         handleChange(e, todo._id, todo.isCompleted)}
@@ -68,7 +64,7 @@ function TodoList({user, todo, handleComplete, handleDelete, state, setState, se
                 Delete
                 </button>
             </form>
-        </>
+       </>
     )
 }
                     
