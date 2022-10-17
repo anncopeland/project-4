@@ -49,7 +49,7 @@ _____________________________________
 _____________________________________
 ## Wins
 
-* Working with React-Bootstrap was a great experience throughout this project.  It made forms easier and made the NavBar look clean and minimal.
+* Working with React-Bootstrap was a great experience throughout this project.  It made forms easier and made the NavBar look clean and minimal.  
 
 
 _____________________________________
