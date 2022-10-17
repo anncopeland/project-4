@@ -4,7 +4,7 @@
     text-align: center;
     align-items: center;
     justify-content: right;
-    background: rgb(239, 238, 238);
+    background: rgb(231, 230, 230);
     margin: 5px;
     border: 2em;
     padding: 10px;
@@ -13,17 +13,16 @@
   }
 
 .chk-label {
-  display: flexbox;
   text-align: right;
   margin: auto;
   padding: 2em;
   font-size: small;
-  color: rgb(193, 142, 142);
-
+  color: rgb(225, 158, 158);
 }
 
 .del-btn {
   border-radius: .5em;
   font-size: small;
-  color: rgb(182, 117, 117);
+  color: rgb(221, 161, 161);
+  background-color: rgb(221, 214, 214);
 }

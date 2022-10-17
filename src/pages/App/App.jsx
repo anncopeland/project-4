@@ -5,7 +5,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
-import TodoPage from '../../components/TodoPage/TodoPage';
+import TodoFormPage from '../../components/TodoFormPage/TodoFormPage.jsx';
 import TodoList from '../TodoList/TodoList';
 import NotesPage from '../NotesPage/NotesPage';
 import AboutPage from '../AboutPage/AboutPage';
@@ -35,7 +35,7 @@ function App() {
                     <NavBar user={user} setUser={setUser}/>
                     <Routes>
                         <Route path="/homePage" element={<HomePage user={user}/>}/>
-                        <Route path="/todoPage" element={<TodoPage user={user} setUser={setUser} addTodo={addTodo} todoList={TodoList}  />}/>
+                        <Route path="/todoPage" element={<TodoFormPage user={user} setUser={setUser} addTodo={addTodo} todoList={TodoList}  />}/>
                         <Route path="/notesPage" element={<NotesPage user={user} />}/>
                         <Route path="/aboutPage" element={<AboutPage />}/>
                     </Routes>

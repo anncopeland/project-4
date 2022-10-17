@@ -8,13 +8,13 @@ router.get("/", todosCtrl.index);
 // GET /api/todos/:id
 router.post("/addTodo/", todosCtrl.addTodo);
 
-router.put("/updateTodo/", todosCtrl.updateTodo);
+// router.put("/updateTodo/", todosCtrl.updateTodo);
 
 //delete /api/todos
 // router.delete("/deleteTodo/", todosCtrl.deleteTodo);
 router.delete("/:id", todosCtrl.deleteTodo);
 
-//PUT
-router.put('/:id', todosCtrl.isCompletedTodo)
+//isCompleted PUT /api/todos
+router.put('/updateTodo/', todosCtrl.isCompletedTodo)
 
 module.exports = router;

@@ -23,8 +23,8 @@ function NavBar({user, setUser}) {
                     <Nav.Link href="/todoPage">home</Nav.Link>
                     <Nav.Link href="/aboutPage">about</Nav.Link>
                     <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/todoPage">todos</NavDropdown.Item>   
-                        <NavDropdown.Item href="/notesPage">notes(N/A)</NavDropdown.Item>
+                        <NavDropdown.Item href="/todoPage">todos...</NavDropdown.Item>   
+                        <NavDropdown.Item href="/notesPage">notes...</NavDropdown.Item>
                         <NavDropdown.Divider />
                     </NavDropdown>
                     </Nav>
